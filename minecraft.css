@@ -1,0 +1,98 @@
+/* Test.css */
+
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background and general page styling */
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #87CEEB; /* Sky blue background */
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Navigation styling */
+  nav {
+    background-color: #7CFC00; /* Grass-green background */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border: 3px solid #556B2F; /* Dark green border */
+  }
+  
+  nav a {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border: 2px solid #8B4513; /* Brown border */
+    background-color: #32CD32; /* Lime green */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #228B22; /* Darker green on hover */
+  }
+  
+  /* Header styling */
+  h1 {
+    font-size: 3em;
+    color: #2E8B57; /* Sea green */
+    text-shadow: 2px 2px #556B2F; /* Darker green shadow */
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  
+  /* Blocky, pixelated styling */
+  h1, h3, nav a {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Section-specific styling */
+  section {
+    background-color: #D2B48C; /* Sand-colored for Minecraft dirt blocks */
+    padding: 15px;
+    border: 4px solid #8B4513; /* Brown border to simulate dirt block edges */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  /* Button styles for any interactive elements */
+  button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    padding: 10px 20px;
+    background-color: #8B4513; /* Brown background */
+    color: #FFFFFF;
+    border: 2px solid #556B2F;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #6B8E23; /* Olive on hover */
+  }
+  
+  /* Add pixelated shadows */
+  h1, h3, nav a, button, section {
+    filter: drop-shadow(2px 2px #333);
+  }
+  

@@ -1,0 +1,246 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background and general page styling */
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #87ceeb; /* Sky blue background */
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation styling */
+nav {
+  background-color: #7cfc00; /* Grass-green background */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border: 3px solid #556b2f; /* Dark green border */
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border: 2px solid #8b4513; /* Brown border */
+  background-color: #32cd32; /* Lime green */
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #228b22; /* Darker green on hover */
+}
+
+/* Header styling */
+h1 {
+  font-size: 3em;
+  color: #2e8b57; /* Sea green */
+  text-shadow: 2px 2px #556b2f; /* Darker green shadow */
+}
+
+/* Blocky, pixelated styling */
+h1,
+nav a {
+  font-family: "Courier New", Courier, monospace;
+}
+
+p {
+  text-align: left;
+  font-family: monospace;
+}
+
+ul {
+  text-align: left;
+  font-weight: bold;
+}
+/* Section-specific styling */
+section {
+  background-color: #d2b48c; /* Sand-colored */
+  padding: 15px;
+  border: 4px solid #8b4513; /* Brown border */
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Button styles */
+button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 10px 20px;
+  background-color: #8b4513; /* Brown background */
+  color: #ffffff;
+  border: 2px solid #556b2f;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #6b8e23; /* Olive on hover */
+}
+
+/* Add pixelated shadows */
+h1,
+nav a,
+button,
+section {
+  filter: drop-shadow(2px 2px #333);
+}
+
+/* Styling for the registration form */
+#contactForm {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #d2b48c; /* Sandfarben */
+  padding: 20px;
+  border-radius: 8px;
+  border: 4px solid #8b4513; /* Brauner Rand */
+}
+
+/* Fieldset and Legend */
+#contactForm fieldset {
+  border: 1px solid #556b2f; /* Dunkelgrüner Rand */
+  padding: 15px;
+}
+
+#contactForm legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2e8b57;
+  margin-bottom: 10px;
+}
+
+/* Labels and Inputs */
+#contactForm label,
+#contactForm input[type="text"],
+#contactForm input[type="tel"],
+#contactForm input[type="email"],
+#contactForm input[type="datetime-local"],
+#contactForm textarea,
+#contactForm select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Label spacing */
+#contactForm label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input styling */
+#contactForm input[type="text"],
+#contactForm input[type="tel"],
+#contactForm input[type="email"],
+#contactForm input[type="datetime-local"],
+#contactForm textarea,
+#contactForm select {
+  padding: 8px;
+  border: 1px solid #8b4513;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Textarea adjustment */
+#contactForm textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Submit Button */
+#contactForm button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #8b4513;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #6b8e23;
+}
+
+footer {
+  color: #ffffff;
+  background-color: #4682b4;
+  padding: 20px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  nav a {
+    font-size: 1em;
+    padding: 8px;
+    margin: 0 10px;
+  }
+  section {
+    padding: 10px;
+    margin: 10px auto;
+  }
+  #contactForm {
+    max-width: 100%;
+    padding: 15px;
+  }
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+  nav {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  nav a {
+    font-size: 0.9em;
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  section {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 100%;
+  }
+  #contactForm {
+    padding: 10px;
+  }
+  footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+  }
+}
