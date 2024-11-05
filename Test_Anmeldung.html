@@ -10,7 +10,7 @@
 
   <body>
     <nav>
-      <a href="Test.html" id="Home">Home</a>
+      <a href="index.html" id="Home">Home</a>
       <a href="Test_FertigeProjekte.html" id=" FertigeProjekte"
         >Fertige Projekte</a
       >
@@ -52,7 +52,7 @@
           type="tel"
           id="phone"
           name="phone"
-          pattern="^\d{3} \d{3} \d{2} \d{2}$"
+          pattern="^\d{10}"
           placeholder="079 526 66 70"
         /><br /><br />
 
@@ -98,9 +98,19 @@
         .addEventListener("submit", function (event) {
           event.preventDefault(); // Verhindert das standardmäßige Absenden des Formulars
 
-          // Werte der Eingabefelder holen
-          const firstName = document.getElementById("firstName").value;
-          const lastName = document.getElementById("lastName").value;
+          // Werte der Eingabefelder holen und trimmen
+          const firstName = document.getElementById("firstName").value.trim();
+          const lastName = document.getElementById("lastName").value.trim();
+
+          // Überprüfung auf leere oder nur aus Leerzeichen bestehende Werte
+          if (firstName === "" || lastName === "") {
+            alert(
+              "Vorname und Nachname dürfen nicht nur aus Leerzeichen bestehen."
+            );
+            return; // Stoppt das Absenden des Formulars, wenn Bedingung erfüllt ist
+          }
+
+          // Restliche Werte holen (falls benötigt) und Ausgabe zur Konsole
           const phone = document.getElementById("phone").value;
           const email = document.getElementById("email").value;
           const subject = document.getElementById("subject").value;
@@ -108,7 +118,6 @@
           const timestamp = document.getElementById("timestamp").value;
           const topicList = document.getElementById("topicList").value;
 
-          // Konsolenausgabe der Formulardaten
           console.log("Formular erfolgreich abgesendet:");
           console.log("Vorname:", firstName);
           console.log("Nachname:", lastName);
